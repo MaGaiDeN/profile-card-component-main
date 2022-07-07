@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* ### Primary */
+
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* ### Neutral */
+
+    --Dark-gray: hsl(0, 0%, 59%);
+    --white: hsl(0, 0%, 100%);
+    --Gray: hsl(0, 0%, 91%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    background-color: var(--Dark-cyan);
+}
+
+.card {
+    width: 330px;
+    height: 375px;
+    border-radius: 12px;
+    margin: 150px auto;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.card__profile {
+    position: relative;
+}
+
+.card__imageTop {
+    position: absolute;
+    top: -590px;
+    right: 220px;
+    z-index: -1;
+}
+
+.card__profile__banner {
+    width: 330px;
+    height: 140px;
+    margin-bottom: 65px;
+}
+
+.card__profile__photo {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    position: absolute;
+    top: 87.5px;
+    left: 113px;
+}
+
+.card__profile__title {
+    margin: 0 auto 14px;
+    text-align: center;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 1em;
+}
+
+.card__profile__title--span {
+    padding-left: 8px;
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+}
+
+.card__profile__subtitle {
+    text-align: center;
+    color: var(--Dark-grayish-blue);
+    font-size: .8em;
+    margin-bottom: 25px;
+}
+
+.card__profile__line {
+    border: 0;
+    background-color: var(--Gray);
+    height: 1px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card__profile__stats {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card__profile__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__profile__container__number {
+    font-weight: 700;
+}
+
+.card__profile__container__title {
+    color: var(--Dark-grayish-blue);
+    font-size: .6em;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.card__imageBottom {
+    position: absolute;
+    bottom: -450px;
+    left: 200px;
+    z-index: -1;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+    .card {
+        width: 350px;
+        height: 375px;
+    }
+    .card__profile__banner {
+        width: 100%;
+    }
+    .card__profile__photo {
+        margin: 0 auto 40px;
+    }
+    .card__imageTop {
+        top: -300;
+        right: 950px;
+    }
+    .card__imageBottom {
+        bottom: -400px;
+        left: 850px;
+    }
+}
